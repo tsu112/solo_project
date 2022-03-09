@@ -1,0 +1,42 @@
+[REQUIRED] Name: Sue Yang
+[REQUIRED] Project Title: Sue's Craft
+[REQUIRED] Project Stack: Python
+[REQUIRED] GitHub Repo Link: https://github.com/tsu112/solo_project.git
+
+[REQUIRED] Project Description: Create a project that will build website that will allow people to purchase different craft designs.
+
+[REQUIRED] New Programming Concept(s) I'm Planning to Learn: Generate purchace order numbers and store them to reference back to.
+
+[REQUIRED] Week 1 Features (to show at Review during Week 2)
+- 
+
+[REQUIRED] Week 2 Features (to show at first office hour/lecture of Week 3)
+- ***Finish CSS work will be in Boot Strap***
+- 
+
+[REQUIRED] Product Backlog If I have more time after completing my MVP, I'll start to work on adding more features such as purchasing bundle discount.
+- 
+
+
+
+
+
+
+Other Week 1 Tasks
+- Sign up for a group (https://docs.google.com/spreadsheets/d/1Xb8MlejB--Tpwbr61H3VzP3am9idU5QVOoJs7a4kA1k/edit#gid=0)
+- Schedule a Review during Week 2 (https://calendly.com/d/cnc-5t7-4yv/solo-project-sprint-w1-review)
+- Create GitHub repo for project
+- Create a .gitignore file for my project for my GitHub repo (enter in React, Python, or Java at https://www.toptal.com/developers/gitignore)
+- Finish this completed txt file and create project wireframe using Balsamiq (https://balsamiq.com/wireframes/) [Drawings and other wireframe programs also accepted!]
+- Email Zack this completed txt file, and project wireframe for approval
+- Submit completed wireframe on platform (https://login.codingdojo.com/m/97/6237/44911)
+- Complete Arrays To Do 1 & Arrays To Do 2 assignments
+
+
+Other Week 2 Tasks
+- Schedule my time for my presentation (https://docs.google.com/spreadsheets/d/1Xb8MlejB--Tpwbr61H3VzP3am9idU5QVOoJs7a4kA1k/edit#gid=414986054)
+- Begin to talk with group about project ideas and what skills I bring to the table
+- Complete Singly Linked Lists Fronts & Display assignments
+
+
+
