@@ -1,0 +1,111 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
+    <title>Checkout</title>
+  </head>
+  <body>
+    <div class="container bg-secondary text-light p-0">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container px-4 px-lg-5">
+          <a class="navbar-brand" href="#!">Welcome {{customer.f_name}}</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/dashboard"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#!">Orders</a></li>
+              <li class="nav-item">
+                <a class="nav-link" href="/account">Accounts</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/logout">Log Out</a>
+              </li>
+            </ul>
+            <form class="d-flex"></form>
+          </div>
+        </div>
+      </nav>
+      <main class="mt-5 pt-4">
+        <div class="container dark-grey-text mt-5">
+          <div class="row wow fadeIn">
+            <div class="col-md-6 mb-4">
+              <img
+                src="{{ url_for('static', filename='img/3monogram.jpg') }}"
+                class="img-fluid"
+                alt=""
+              />
+            </div>
+            <div class="col-md-6 mb-4">
+              <form action="/purchase" method="POST">
+                  <div class="p-4">
+                    <div class="mb-3">
+                      <a href="">
+                        <span class="badge purple mr-1">New</span>
+                      </a>
+                    <p class="lead">
+                      <span>$50</span>
+                    </p>
+    
+                    <p class="lead font-weight-bold">Couple's Monogram</p>
+                    <select name="wood">
+                        <option value="plywood">Plywood</option>
+                        <option value='mdf'>MFD</option>
+                    </select>
+                    <p>Choose thickness</p>
+    
+                    <select name="thickness">
+                        <option value='1"'>1"</option>
+                        <option value='3/4"'>.75"</option>
+                        <option value='1/2"'>.5"</option>
+                        <option value='1/4"'>.25"</option>
+                    </select>
+                    <p>Choose thickness</p>
+                    <form class="d-flex justify-content-left">
+                        <!-- Default input -->
+                        <input
+                        type="text"
+                        name="description"
+                        value=""
+                        class="form-control"
+                        style="width: 100px"
+                        />
+                    </form>
+                    <p>Select 3 letters. Example: KYS</p>
+                    <button class="btn btn-primary btn-md my-0 p" type="submit">
+                      Buy Now
+                    </button>
+                  </div>
+                  <!--Content-->
+                </div>
+              </form>
+            <!--Grid column-->
+          </div>
+          <!--Grid row-->
+
+          <hr />
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
