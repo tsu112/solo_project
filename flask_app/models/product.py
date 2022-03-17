@@ -44,6 +44,12 @@ class Product:
         results = connectToMySQL(cls.db).query_db(query, data)
         return results
 
+    @classmethod
+    def update(cls, data):
+        query = "UPDATE products SET wood= %(wood)s, thickness= %(thickness)s, description= %(description)s WHERE id = %(id)s"
+        results = connectToMySQL(cls.db).query_db(query, data)
+        return results
+
     @ staticmethod
     def validate_product(product):
         is_valid = True
@@ -53,7 +59,7 @@ class Product:
         if len(product['thickness']) < 1:
             flash("Thickness amount needed!")
             is_valid = False
-        # if len(product['description']) < 3:
-        #     flash("Input 3 letters!")
-        #     is_valid = False
+        if len(product['description']) < 3:
+            flash("Input at least 3 letters!")
+            is_valid = False
         return is_valid

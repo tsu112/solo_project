@@ -35,7 +35,9 @@
                   >Home</a
                 >
               </li>
-              <li class="nav-item"><a class="nav-link" href="#!">Orders</a></li>
+              <li class="nav-item">
+                <a class="nav-link" href="/orders">Orders</a>
+              </li>
               <li class="nav-item">
                 <a class="nav-link" href="/account">Accounts</a>
               </li>
@@ -73,6 +75,7 @@
                   {% endwith %}
                   <form action="/update" method="POST">
                     <!-- **********************First and Last Name-->
+                    <input type="hidden" name="id" value="{{ customer.id }}" />
                     <div class="row">
                       <div class="col-md-6 mb-4">
                         <div class="form-outline">
@@ -91,7 +94,7 @@
                         <div class="form-outline">
                           <input
                             type="text"
-                            value="{{customer.f_name}}"
+                            value="{{customer.l_name}}"
                             name="l_name"
                             class="form-control form-control-lg"
                           />

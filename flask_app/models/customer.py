@@ -76,3 +76,30 @@ class Customer:
         if customer['password'] != customer['con_pass']:
             flash("Passwords don't match", "register")
         return is_valid
+
+    # @ staticmethod
+    # def validate_update(customer):
+    #     if not EMAIL_REGEX.match(customer['email']):
+    #         flash("Invalid email!", "register")
+    #         is_valid = False
+    #     if len(customer['email']) < 1:
+    #         flash("Must enter email!", "register")
+    #         is_valid = False
+    #     if len(customer['f_name']) < 3:
+    #         flash("First name must be at least 2 characters", "register")
+    #         is_valid = False
+    #     if len(customer['l_name']) < 3:
+    #         flash("Last name must be at least 2 characters", "register")
+    #         is_valid = False
+    #     if len(customer['address']) < 10:
+    #         flash("Address must be at least 35 characthers long")
+    #         is_valid = False
+    #     if len(customer['payment']) < 4:
+    #         flash("Payment must be at least 4 characthers long")
+    #         is_valid = False
+    #     if len(customer['password']) < 8:
+    #         flash("Password must be at least 8 characters", "register")
+    #         is_valid = False
+    #     if customer['password'] != customer['con_pass']:
+    #         flash("Passwords don't match", "register")
+    #     return is_valid

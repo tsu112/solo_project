@@ -74,9 +74,8 @@ def edit_customer():
 def update():
     if 'customer_id' not in session:
         return redirect('/logout')
-    if not Customer.validate_register(request.form):
-        return redirect('/account')
     data = {
+        "id": request.form['id'],
         "f_name": request.form['f_name'],
         "l_name": request.form['l_name'],
         "address": request.form['address'],
@@ -84,6 +83,7 @@ def update():
         "payment": request.form['payment'],
         "password": bcrypt.generate_password_hash(request.form['password'])
     }
+
     Customer.update(data)
     return redirect("/dashboard")
 

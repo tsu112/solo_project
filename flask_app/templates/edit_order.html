@@ -57,7 +57,20 @@
               />
             </div>
             <div class="col-md-6 mb-4">
-              <form action="/purchase" method="POST">
+              <form action="/product_update" method="POST">
+                {% with messages = get_flashed_messages() %}
+                <!-- declare a variable called messages -->
+                {% if messages %}
+                <!-- check if there are any messages -->
+                {% for message in messages %}
+                <!-- loop through the messages -->
+                <p class="2.5rem">{{message}}</p>
+                <!-- display each message in a paragraph tag -->
+                {% endfor %}
+                <!--  -->
+                {% endif %}
+                <!--  -->
+                {% endwith %}
                   <div class="p-4">
                     <div class="mb-3">
                       <a href="">
@@ -66,15 +79,15 @@
                     <p class="lead">
                       <span>$50</span>
                     </p>
-    
                     <p class="lead font-weight-bold">Couple's Monogram</p>
-                    <select name="wood">
+                    <input type="hidden" name="id" value="{{product.id}}" />
+                    <select name="wood" value="{{ product.wood }}">
                         <option value="plywood">Plywood</option>
                         <option value='mdf'>MFD</option>
                     </select>
                     <p>Choose thickness</p>
     
-                    <select name="thickness">
+                    <select name="thickness" value="{{ product.thickness }}">
                         <option value='1"'>1"</option>
                         <option value='3/4"'>.75"</option>
                         <option value='1/2"'>.5"</option>
@@ -86,14 +99,14 @@
                         <input
                         type="text"
                         name="description"
-                        value=""
+                        value="{{ product.description }}"
                         class="form-control"
                         style="width: 100px"
                         />
                     </form>
                     <p>Select 3 letters. Example: KYS</p>
                     <button class="btn btn-primary btn-md my-0 p" type="submit">
-                      Buy Now
+                      Update Now
                     </button>
                   </div>
                   <!--Content-->

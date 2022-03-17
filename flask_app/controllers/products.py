@@ -55,3 +55,30 @@ def cancel_product(num):
     }
     Product.cancel(data)
     return redirect("/orders")
+
+
+@ app.route("/edit_product/<int:num>")
+def edit_product(num):
+    data = {
+        "id": num
+    }
+    customer_data = {
+        "id": session['customer_id']
+    }
+    customer = Customer.get_one(customer_data)
+    product = Product.get_one(data)
+    return render_template("edit_order.html", customer=customer, product=product)
+
+
+@ app.route("/product_update", methods=["POST"])
+def product_update():
+    if 'customer_id' not in session:
+        return redirect('/logout')
+    data = {
+        "id": request.form["id"],
+        "wood": request.form['wood'],
+        "thickness": request.form['thickness'],
+        "description": request.form['description']
+    }
+    Product.update(data)
+    return redirect("/orders")
