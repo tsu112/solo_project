@@ -33,7 +33,7 @@ def purchase():
         "description": request.form['description']
     }
     Product.create(data)
-    return redirect("/dashboard")
+    return redirect("/orders")
 
 
 @ app.route("/orders")
@@ -59,6 +59,8 @@ def cancel_product(num):
 
 @ app.route("/edit_product/<int:num>")
 def edit_product(num):
+    if 'customer_id' not in session:
+        return redirect('/logout')
     data = {
         "id": num
     }
@@ -74,6 +76,8 @@ def edit_product(num):
 def product_update():
     if 'customer_id' not in session:
         return redirect('/logout')
+    if not Product.validate_product(request.form):
+        return redirect("/edit_product")
     data = {
         "id": request.form["id"],
         "wood": request.form['wood'],

@@ -62,4 +62,7 @@ class Product:
         if len(product['description']) < 3:
             flash("Input at least 3 letters!")
             is_valid = False
+        if len(product['description']) >= 4:
+            flash("Input at only 3 letters!")
+            is_valid = False
         return is_valid

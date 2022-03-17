@@ -75,14 +75,13 @@
         <div
           class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center"
         >
-          <!-- ***************************Star -->
+          <!-- ***************************3-Letter -->
           <div class="col mb-5">
             <div class="card h-100">
-              <!-- Product image-->
               <img
                 class="card-img-top"
-                src="{{ url_for('static', filename='img/star.jpg') }}"
-                alt="star"
+                src="{{ url_for('static', filename='img/3monogram.jpg') }}"
+                alt="3 Letter Monogram"
               />
               <!-- Product details-->
               <div class="card-body bg-secondary p-4">
@@ -90,7 +89,7 @@
                   <!-- Product name-->
                   <h5 class="fw-bolder">Star Cutout</h5>
                   <!-- Product price-->
-                  $15
+                  $40
                 </div>
               </div>
               <!-- Product actions-->
@@ -106,11 +105,17 @@
           <!-- ***************************Circle -->
           <div class="col mb-5">
             <div class="card h-100">
+              <div
+                class="badge bg-dark text-white position-absolute"
+                style="top: 0.5rem; right: 0.5rem"
+              >
+                Coming Soon
+              </div>
               <!-- Product image-->
               <img
                 class="card-img-top"
                 src="{{ url_for('static', filename='img/circle.jpg') }}"
-                alt="star"
+                alt="circle"
               />
               <!-- Product details-->
               <div class="card-body bg-secondary p-4">
@@ -132,11 +137,17 @@
           <!-- ***************************Rectangle -->
           <div class="col mb-5">
             <div class="card h-100">
+              <div
+                class="badge bg-dark text-white position-absolute"
+                style="top: 0.5rem; right: 0.5rem"
+              >
+                Coming Soon
+              </div>
               <!-- Product image-->
               <img
                 class="card-img-top"
                 src="{{ url_for('static', filename='img/rectangles.jpg') }}"
-                alt="star"
+                alt="rectangles"
               />
               <!-- Product details-->
               <div class="card-body bg-secondary p-4">
@@ -158,11 +169,17 @@
           <!-- ***************************Letter -->
           <div class="col mb-5">
             <div class="card h-100">
+              <div
+                class="badge bg-dark text-white position-absolute"
+                style="top: 0.5rem; right: 0.5rem"
+              >
+                Coming Soon
+              </div>
               <!-- Product image-->
               <img
                 class="card-img-top"
                 src="{{ url_for('static', filename='img/letter.jpg') }}"
-                alt="star"
+                alt="letter image"
               />
               <!-- Product details-->
               <div class="card-body bg-secondary p-4">
@@ -192,9 +209,5 @@
         </p>
       </div>
     </footer>
-    <!-- Bootstrap core JS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Core theme JS-->
-    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
   </body>
 </html>

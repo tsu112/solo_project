@@ -22,10 +22,10 @@ def login():
     customer = Customer.get_cust_by_email(request.form)
     if not customer:
         flash("Invalid Email", "login")
-        return redirect("/")
+        return redirect("/sign_in")
     if not bcrypt.check_password_hash(customer.password, request.form['password']):
         flash("Invalid Password", "login")
-        return redirect("/")
+        return redirect("/sign_in")
     session['customer_id'] = customer.id
     return render_template('/dashboard.html', customer=customer)
 
@@ -80,8 +80,7 @@ def update():
         "l_name": request.form['l_name'],
         "address": request.form['address'],
         "email": request.form['email'],
-        "payment": request.form['payment'],
-        "password": bcrypt.generate_password_hash(request.form['password'])
+        "payment": request.form['payment']
     }
 
     Customer.update(data)

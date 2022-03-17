@@ -14,6 +14,7 @@
   </head>
   <body>
     <div class="container bg-light text-light">
+      <!-- ************************************************Navbar -->
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container px-4 px-lg-5">
           <a class="navbar-brand" href="#!">Welcome {{customer.f_name}}</a>
@@ -78,7 +79,6 @@
                 <td>{{ row.wood }}</td>
                 <td>{{ row.thickness }}</td>
                 <td>
-                  <a href="/review_product/{{row.id}}">Review</a> |
                   <a href="/edit_product/{{row.id}}">Edit</a> |
                   <a href="/cancel_product/{{row.id}}">Cancel</a>
                 </td>

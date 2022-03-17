@@ -13,6 +13,7 @@
   </head>
   <body>
     <div class="container bg-secondary text-light p-0">
+      <!-- ************************************************Navbar -->
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container px-4 px-lg-5">
           <a class="navbar-brand" href="#!">Welcome {{customer.f_name}}</a>
@@ -48,12 +49,25 @@
       </nav>
       <main class="mt-5 pt-4">
         <div class="container dark-grey-text mt-5">
+          {% with messages = get_flashed_messages() %}
+                  <!-- declare a variable called messages -->
+                  {% if messages %}
+                  <!-- check if there are any messages -->
+                  {% for message in messages %}
+                  <!-- loop through the messages -->
+                  <p class="2.5rem">{{message}}</p>
+                  <!-- display each message in a paragraph tag -->
+                  {% endfor %}
+                  <!--  -->
+                  {% endif %}
+                  <!--  -->
+                  {% endwith %}
           <div class="row wow fadeIn">
             <div class="col-md-6 mb-4">
               <img
                 src="{{ url_for('static', filename='img/3monogram.jpg') }}"
                 class="img-fluid"
-                alt=""
+                alt="3 Letter Monogram"
               />
             </div>
             <div class="col-md-6 mb-4">
@@ -91,7 +105,7 @@
                         style="width: 100px"
                         />
                     </form>
-                    <p>Select 3 letters. Example: KYS</p>
+                    <p>Select 3 letters. Example: RSM</p>
                     <button class="btn btn-primary btn-md my-0 p" type="submit">
                       Buy Now
                     </button>

@@ -39,7 +39,7 @@ class Customer:
 
     @classmethod
     def update(cls, data):
-        query = "UPDATE customers SET f_name= %(f_name)s, l_name= %(l_name)s, password= %(password)s, address= %(address)s, email= %(email)s, payment= %(payment)s, updated_at=NOW() WHERE id = %(id)s"
+        query = "UPDATE customers SET f_name= %(f_name)s, l_name= %(l_name)s, address= %(address)s, email= %(email)s, payment= %(payment)s, updated_at=NOW() WHERE id = %(id)s"
         results = connectToMySQL(cls.db).query_db(query, data)
         return results
 
