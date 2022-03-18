@@ -76,8 +76,8 @@ def edit_product(num):
 def product_update():
     if 'customer_id' not in session:
         return redirect('/logout')
-    if not Product.validate_product(request.form):
-        return redirect("/edit_product")
+    # if not Product.validate_product(request.form):
+    #     return redirect("/edit_product")
     data = {
         "id": request.form["id"],
         "wood": request.form['wood'],
