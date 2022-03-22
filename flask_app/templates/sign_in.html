@@ -13,79 +13,101 @@
     <title>Log In</title>
   </head>
   <body>
-    <div class="container bg-light text-light">
-      <nav class="navbar navbar-light bg-primary d-flex">
-        <h1>Welcome back to Sue's Craft</h1>
-        <a class="navbar-brand" href="/">Don't have a account? Register</a>
-      </nav>
-      <!-- ******************************************************** -->
-      <section class="vh-100 gradient-custom text-dark">
-        <div class="container py-5 h-100">
-          <div class="row justify-content-center align-items-center h-100">
-            <div class="col-12 col-lg-9 col-xl-7">
-              <div
-                class="card shadow-2-strong card-registration"
-                style="border-radius: 15px"
-              >
-                <div class="card-body p-4 p-md-5">
-                  <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Sign In</h3>
-                  <form action="/login" method="POST">
-                    <!-- ********************Email-->
-                    {% with messages = get_flashed_messages() %}
-                    <!-- declare a variable called messages -->
-                    {% if messages %}
-                    <!-- check if there are any messages -->
-                    {% for message in messages %}
-                    <!-- loop through the messages -->
-                    <p class="2.5rem">{{message}}</p>
-                    <!-- display each message in a paragraph tag -->
-                    {% endfor %}
-                    <!--  -->
-                    {% endif %}
-                    <!--  -->
-                    {% endwith %}
-                    <div class="row">
-                      <div class="col-md-6 mb-4 pb-2">
-                        <div class="form-outline">
-                          <input
-                            type="email"
-                            name="email"
-                            class="form-control form-control-lg"
-                          />
-                          <label class="form-label" for="email">Email</label>
-                        </div>
+    <!-- *********************************************Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container px-4 px-lg-5">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb- mb-lg-0 ms-lg-4">
+            <li class="nav-item">
+              <a class="nav-link" href="/">Don't have a account? Register</a>
+            </li>
+          </ul>
+          <form class="d-flex"></form>
+        </div>
+      </div>
+    </nav>
+    <!--****************************************** Header-->
+    <header class="bg-secondary py-2">
+      <div class="container px-4 px-lg-5 my-3">
+        <div class="text-center text-white">
+          <h1 class="display-4 fw-bolder">Welcome to Sue's Craft</h1>
+        </div>
+      </div>
+    </header>
+    <!--****************************************** Body-->
+    <section class="vh-100 gradient-custom text-dark">
+      <div class="container py-5 h-80">
+        <div class="row justify-content-center align-items-center h-100">
+          <div class="col-12 col-lg-9 col-xl-7">
+            <div
+              class="card shadow-2-strong card-registration"
+              style="border-radius: 15px"
+            >
+              <div class="card-body p-4 p-md-5">
+                <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Sign In</h3>
+                <form action="/login" method="POST">
+                  <!-- ********************Email-->
+                  {% with messages = get_flashed_messages() %}
+                  <!-- declare a variable called messages -->
+                  {% if messages %}
+                  <!-- check if there are any messages -->
+                  {% for message in messages %}
+                  <!-- loop through the messages -->
+                  <p class="2.5rem">{{message}}</p>
+                  <!-- display each message in a paragraph tag -->
+                  {% endfor %}
+                  <!--  -->
+                  {% endif %}
+                  <!--  -->
+                  {% endwith %}
+                  <div class="row">
+                    <div class="col-md-6 mb-4 pb-2">
+                      <div class="form-outline">
+                        <input
+                          type="email"
+                          name="email"
+                          class="form-control form-control-lg"
+                        />
+                        <label class="form-label" for="email">Email</label>
                       </div>
                     </div>
-                    <!-- **********************Password-->
-                    <div class="row">
-                      <div class="col-md-6 mb-4 d-flex align-items-center">
-                        <div class="form-outline datepicker w-100">
-                          <input
-                            type="password"
-                            class="form-control form-control-lg"
-                            name="password"
-                          />
-                          <label for="password" class="form-label"
-                            >Password</label
-                          >
-                        </div>
+                  </div>
+                  <!-- **********************Password-->
+                  <div class="row">
+                    <div class="col-md-6 mb-4 d-flex align-items-center">
+                      <div class="form-outline datepicker w-100">
+                        <input
+                          type="password"
+                          class="form-control form-control-lg"
+                          name="password"
+                        />
+                        <label for="password" class="form-label"
+                          >Password</label
+                        >
                       </div>
                     </div>
-                    <!-- **********************Sumbmit-->
-                    <div class="mt-4 pt-2">
-                      <input
-                        class="btn btn-primary btn-lg"
-                        type="submit"
-                        value="Log In"
-                      />
-                    </div>
-                  </form>
-                </div>
+                  </div>
+                  <!-- **********************Sumbmit-->
+                  <div class="mt-4 pt-2">
+                    <input
+                      class="btn btn-primary btn-lg"
+                      type="submit"
+                      value="Log In"
+                    />
+                  </div>
+                </form>
               </div>
             </div>
           </div>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">
+          Copyright &copy; Sue's Craft 2022
+        </p>
+      </div>
+    </footer>
   </body>
 </html>
